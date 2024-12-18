@@ -1,0 +1,1 @@
+ffmpeg -i original-video-file.mp4 -vf "scale=-2:128, crop=160:128, transpose=2, vflip" -r 16 -acodec pcm_s16le -ac 2 -ar 22050 -pix_fmt yuvj420p -c:v mjpeg -q:v 2 result-video-converted.avi
